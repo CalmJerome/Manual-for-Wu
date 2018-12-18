@@ -148,3 +148,5 @@
 > 查看暂存区(stage)和工作区(可以理解本地的文件夹#的区别: `git diff`
 >
 > 养成一个好习惯：执行`git commit`命令之前先执行`git diff HEAD`用来**比较工作区与最新版本库**(上次commit)，然后再add和commit
+>
+> `git rm` 误删恢复 `git checkout -- <filename>`将版本库替换工作区
