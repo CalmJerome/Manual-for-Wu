@@ -44,11 +44,13 @@
 >
 > 合并某分支到当前分支：`git merge <name>`
 >
+> 不使用fast-forward，保留分支commit的历史：`git merge --no--ff <branchname>` 
+>
 > 删除分支：`git branch -d <name>`
 >
 > 强行删除未merge的 分支： `git branch -D <name>`
 >
-> 看到分支合并情况：`git log --graph --pretty=oneline --abbrev-commit`
+> 以图表形式，且仅输出一行看到分支合并情况：`git log --graph --pretty=oneline --abbrev-commit`
 
 #### 储藏（Stashing)
 
@@ -136,3 +138,13 @@
 #### Rebase
 
 > 详见http://gitbook.liuhui998.com/4_2.html
+
+#### 显示文件的改动
+
+> 查看提交带来的改动：`git log -p`
+>
+> 查看特定文件改动:`git log -p <filename>`
+>
+> 查看暂存区(stage)和工作区(可以理解本地的文件夹#的区别: `git diff`
+>
+> 养成一个好习惯：执行`git commit`命令之前先执行`git diff HEAD`用来**比较工作区与最新版本库**(上次commit)，然后再add和commit
